@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2021",                                  /* Setting the target JavaScript version. */
+    "module": "commonjs",                                /* Specifying the module code generation. */
+    "lib": ["es2021", "DOM"],                            /* Including default library files. DOM is for cookie methods. */
+    "outDir": "./dist",                                  /* Redirecting output structure to the 'dist' folder. */
+    "rootDir": "./src",                                  /* Specifying the root directory of source files. */
+    "strict": true,                                      /* Enabling all strict type-checking options. */
+    "esModuleInterop": true,                             /* Enabling compatibility for default imports from modules with no default export. */
+    "skipLibCheck": true,                                /* Skipping type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true,            /* Ensuring that casing is preserved for imported modules. */
+    "moduleResolution": "node",                          /* Resolving modules using Node.js style. */
+    "baseUrl": "./src",                                  /* Base directory to resolve non-absolute module names. */
+    "paths": {                                           /* Setting up path aliases for easier imports. */
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@templates/*": ["templates/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],                            /* Including all TypeScript files in the src directory. */
+  "exclude": ["node_modules"]                            /* Excluding the node_modules directory from compilation. */
+}
