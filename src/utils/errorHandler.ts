@@ -1,27 +1,55 @@
-// Defining a custom error class that extends the built-in Error class
+import { Request, Response, NextFunction } from 'express';
+import { logger } from '@config/logger'; // Assuming logger is available
+
+// Custom error class for handling expected API errors
 export class CustomError extends Error {
-  // Property for storing the HTTP status code associated with the error
   statusCode: number;
-  // Property to indicate if the error is operational (expected)
   isOperational: boolean;
 
-  // Constructor for the CustomError class
-  constructor(message: string, statusCode: number, isOperational = true, stack = '') {
-    // Calling the constructor of the parent Error class
+  constructor(message: string, statusCode: number = 500) {
     super(message);
-    // Assigning the provided status code
     this.statusCode = statusCode;
-    // Assigning the operational status
-    this.isOperational = isOperational;
-    // Setting the name of the error class
-    this.name = this.constructor.name;
-
-    // Capturing the stack trace if not provided
-    if (stack) {
-      this.stack = stack;
-    } else {
-      // Capturing stack trace for better debugging
-      Error.captureStackTrace(this, this.constructor);
-    }
+    this.isOperational = true; // Indicates it's an expected, handled error
+    
+    // Capturing the stack trace (important for debugging)
+    Error.captureStackTrace(this, this.constructor);
   }
 }
+
+// The core Express Error Handling Middleware
+// NOTE: It must have four arguments (err, req, res, next)
+const errorHandler = (
+  err: Error, // The error object caught
+  req: Request, 
+  res: Response, 
+  next: NextFunction // Required but often unused in the final handler
+) => {
+  // 1. Determine Status Code and Message
+  let statusCode = 500;
+  let message = 'Internal Server Error';
+
+  if (err instanceof CustomError) {
+    // Handle our custom, operational errors
+    statusCode = err.statusCode;
+    message = err.message;
+  } else {
+    // Handle unexpected/system errors
+    // Log the full stack trace for non-operational errors
+    logger.error('UNEXPECTED SERVER ERROR:', err); 
+    // If in development, send the stack trace; otherwise, hide it
+    if (process.env.NODE_ENV === 'development') {
+      message = `${err.message} - ${err.stack}`;
+    } else {
+      message = 'A critical error occurred.';
+    }
+  }
+
+  // 2. Send the Error Response
+  res.status(statusCode).json({
+    success: false,
+    error: message,
+  });
+};
+
+// Use a DEFAULT EXPORT for simplicity, matching the common import syntax
+export default errorHandler;

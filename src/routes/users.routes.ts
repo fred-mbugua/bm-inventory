@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { protect, authorize } from '@middlewares/auth.middleware';
-import * as userController from '@controllers/users.controller';
+import * as userController from '../controller/users.controller';
 
 // Creating a new Express router instance
 const router = Router();
