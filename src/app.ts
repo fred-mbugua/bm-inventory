@@ -20,23 +20,23 @@ import saleRoutes from './routes/sales.routes';
 const app = express();
 
 // --- Middleware Setup ---
-// 1. Security Middleware
+// Security Middleware
 app.use(helmet());
 
-// 2. CORS (Configure appropriately for production)
+// CORS (Configure appropriately for production)
 app.use(cors({
     origin: process.env.CORS_ORIGIN || 'http://localhost:3000', // Allow requests from your frontend
     credentials: true, // Allow cookies to be sent
 }));
 
-// 3. Body Parsers
+// Body Parsers
 app.use(express.json()); // To parse application/json
 app.use(express.urlencoded({ extended: true })); // To parse application/x-www-form-urlencoded
 
-// 4. Cookie Parser
+// Cookie Parser
 app.use(cookieParser(COOKIE_SECRET)); // Use the same secret for signed cookies
 
-// 5. Health Check Route
+// Health Check Route
 app.get(API_PREFIX, (req, res) => {
     res.status(200).json({ message: 'POS API is running!' });
 });
@@ -51,7 +51,7 @@ app.use(`${API_PREFIX}/devices`, deviceRoutes);
 app.use(`${API_PREFIX}/sales`, saleRoutes);
 
 // --- Final Error Handler ---
-// This must be the last middleware
+// Must be the last middleware
 app.use(errorHandler);
 
 // Exporting the configured application instance

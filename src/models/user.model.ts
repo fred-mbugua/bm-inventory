@@ -133,20 +133,21 @@ export const findUserById = async (id: string): Promise<UserWithRole | null> => 
 export const createUser = async (userData: {
   username: string;
   email: string;
-  password: string;
-  fullName: string;
+  password_hash: string;
+  full_name: string;
   roleId: string;
 }): Promise<User> => {
   // Destructuring user data
-  const { username, email, password, fullName, roleId } = userData;
+  const { username, email, password_hash, full_name, roleId } = userData;
+  // console.log("User Data: ", userData)
   // Query to insert a new user and return the inserted row
   const sql = `
-    INSERT INTO users (username, email, password, full_name, role_id)
+    INSERT INTO users (username, email, password_hash, full_name, role_id)
     VALUES ($1, $2, $3, $4, $5)
     RETURNING id, username, email, full_name AS "fullName", is_active AS "isActive", role_id AS "roleId", created_at AS "createdAt", updated_at AS "updatedAt";
   `;
   // Executing the query (assert the expected row shape)
-  const rows = await query(sql, [username, email, password, fullName, roleId]) as User[];
+  const rows = await query(sql, [username, email, password_hash, full_name, roleId]) as User[];
   // Returning the newly created user object
   return rows[0];
 };

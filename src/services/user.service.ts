@@ -6,6 +6,7 @@ import {
   User,
   UserWithRole,
 } from '@models/user.model';
+import * as roleModel from '@models/role.model';
 import { findRoleWithPermissionsById } from '@models/role.model';
 import { hashPassword } from '@utils/password';
 import { CustomError } from '@utils/errorHandler';
@@ -70,8 +71,11 @@ export const createUser = async (
 
   // Calling the model to insert the new user into the database
   const newUser = await modelCreateUser({
-    ...userData,
-    password: hashedPassword, // Using the hashed password
+    username: userData.username,
+    email: userData.email,
+    password_hash: hashedPassword,
+    full_name: userData.fullName,
+    roleId: userData.roleId,
   });
 
   // Logging the creation action to the database
@@ -81,6 +85,54 @@ export const createUser = async (
   });
 
   // Returning the newly created user
+  return newUser;
+};
+
+/**
+ * Creates a new user account.
+ * @param userData The user details (username, email, password, fullName, roleId).
+ * @param createdByUserId The ID of the user performing the creation (for audit/log).
+ * @returns The newly created user object.
+ */
+export const createUserAccount = async (
+  userData: Omit<User, 'id' | 'createdAt' | 'updatedAt' | 'isActive'> & { password: string },
+  createdByUserId: string | null
+): Promise<User> => {
+  //  Validate roleId exists
+  const role = await roleModel.findRoleById(userData.roleId);
+  if (!role) {
+    throw new CustomError('Invalid role ID specified.', 400);
+  }
+
+  //  const { password } = userData;
+
+  const roleId = userData.roleId;
+
+   // Hashing the plain text password before storing it
+  const password_hash = await hashPassword(userData.password);
+  const full_name = userData.fullName;
+
+  //  Create user in model
+  const newUser = await modelCreateUser({
+      username: userData.username,
+      email: userData.email,
+      password_hash,
+      full_name,
+      roleId
+  });
+
+  // Log the action (if createdByUserId is present)
+  if (createdByUserId) {
+      logService.logAction('USER_CREATED_BY_ADMIN', createdByUserId, 'User', newUser.id, { 
+          role: role.name 
+      });
+  } else {
+      // Log for self-registration or initial setup
+      logService.logAction('USER_REGISTERED', newUser.id, 'User', newUser.id, { 
+          role: role.name 
+      });
+  }
+
   return newUser;
 };
 

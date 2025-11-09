@@ -1,12 +1,13 @@
 import {
   findAllRolesWithPermissions,
   findRoleWithPermissionsById,
-  findRoleByName,
+  // findRoleByName,
   findAllPermissions,
   RoleWithPermissions,
   Role,
   Permission,
 } from '@models/role.model';
+import * as roleModel from '@models/role.model';
 import { findUsersByRoleId } from '@models/user.model';
 import { transaction, query } from '@config/database';
 import { CustomError } from '@utils/errorHandler';
@@ -257,4 +258,23 @@ export const deleteRole = async (roleId: string, userId: string): Promise<boolea
 
   // Returning the deletion status
   return deleted;
+};
+
+
+/**
+ * Retrieves a role by its unique ID.
+ * @param roleId The UUID of the role.
+ * @returns A promise resolving to the Role object.
+ */
+export const findRoleById = async (roleId: string): Promise<Role | undefined> => {
+  return roleModel.findRoleById(roleId);
+};
+
+/**
+ * Retrieves a role by its name.
+ * @param name The name of the role (e.g., 'Sales Associate').
+ * @returns A promise resolving to the Role object.
+ */
+export const findRoleByName = async (name: string): Promise<Role | undefined> => {
+  return roleModel.findRoleByName(name);
 };

@@ -132,24 +132,24 @@ export const findRoleWithPermissionsById = async (id: string): Promise<RoleWithP
  * @param name The name of the role to find.
  * @returns The role object, or null if not found.
  */
-export const findRoleByName = async (name: string): Promise<Role | null> => {
-  // Query to select specific fields for a role by its unique name
-  const sql = 'SELECT id, name, description, created_at, updated_at FROM roles WHERE name = $1';
-  // Executing the query
-  const rows = await query(sql, [name]);
-  // Returning mapped Role object or null
-  if (rows.length === 0) {
-    return null;
-  }
-  const r: any = rows[0];
-  return {
-    id: r.id,
-    name: r.name,
-    description: r.description,
-    createdAt: new Date(r.created_at || r.createdAt),
-    updatedAt: new Date(r.updated_at || r.updatedAt),
-  };
-};
+// export const findRoleByName = async (name: string): Promise<Role | null> => {
+//   // Query to select specific fields for a role by its unique name
+//   const sql = 'SELECT id, name, description, created_at, updated_at FROM roles WHERE name = $1';
+//   // Executing the query
+//   const rows = await query(sql, [name]);
+//   // Returning mapped Role object or null
+//   if (rows.length === 0) {
+//     return null;
+//   }
+//   const r: any = rows[0];
+//   return {
+//     id: r.id,
+//     name: r.name,
+//     description: r.description,
+//     createdAt: new Date(r.created_at || r.createdAt),
+//     updatedAt: new Date(r.updated_at || r.updatedAt),
+//   };
+// };
 
 /**
  * Finding all available permissions.
@@ -160,6 +160,36 @@ export const findAllPermissions = async (): Promise<Permission[]> => {
   const sql = 'SELECT id, name, description FROM permissions ORDER BY name';
   // Executing the query and returning results
   return query(sql);
+};
+
+/**
+ * Finds a single role by its name.
+ * @param name The name of the role (e.g., 'Sales Associate', 'Admin').
+ * @returns A promise resolving to the Role object or undefined if not found.
+ */
+export const findRoleByName = async (name: string): Promise<Role | undefined> => {
+  const sql = `
+    SELECT id, name, description, is_system_role AS "isSystemRole", created_at AS "createdAt", updated_at AS "updatedAt"
+    FROM roles
+    WHERE name = $1;
+  `;
+  const rows = await query<Role>(sql, [name]);
+  return rows[0];
+};
+
+/**
+ * Finds a single role by its ID.
+ * @param id The UUID of the role.
+ * @returns A promise resolving to the Role object or undefined if not found.
+ */
+export const findRoleById = async (id: string): Promise<Role | undefined> => {
+  const sql = `
+    SELECT id, name, description, is_system_role AS "isSystemRole", created_at AS "createdAt", updated_at AS "updatedAt"
+    FROM roles
+    WHERE id = $1;
+  `;
+  const rows = await query<Role>(sql, [id]);
+  return rows[0];
 };
 
 // ... other role manipulation functions (createRole, updateRole, deleteRole, updateRolePermissions) will be implemented in the service layer using the transaction helper.

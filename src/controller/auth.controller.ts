@@ -2,6 +2,10 @@ import { Request, Response } from 'express';
 import { asyncHandler } from '@utils/asyncHandler';
 import { loginUser, refreshAccessToken } from '@services/auth.service';
 import { JWT_REFRESH_TOKEN_EXPIRATION } from '@config/jwt';
+import { CustomError } from '@utils/errorHandler';
+import * as roleService from '@services/role.service';
+import * as userService from '@services/user.service';
+
 
 // Defining token expiration in milliseconds for cookie settings
 const REFRESH_TOKEN_EXPIRY_MS = parseInt(JWT_REFRESH_TOKEN_EXPIRATION) * 24 * 60 * 60 * 1000; // Assuming 7d in .env
@@ -104,3 +108,92 @@ export const logout = asyncHandler(async (req: Request, res: Response) => {
   // Responding with a success message
   res.status(200).json({ success: true, message: 'Logout successful.' });
 });
+
+
+/**
+ * Handles the registration of a new user.
+ * This endpoint is typically used for initial setup or public registration,
+ * and usually assigns a default, restricted role (e.g., 'Sales Associate').
+ */
+export const registerUser = asyncHandler(async (req: Request, res: Response) => {
+  const { username, email, password, fullName, initialRoleId } = req.body;
+
+  // Basic Validation
+  if (!username || !email || !password || !fullName) {
+    throw new CustomError('Username, email, password, and full name are required for registration.', 400);
+  }
+
+  // Determine Role ID
+  let roleIdToAssign = initialRoleId;
+  
+  if (!roleIdToAssign) {
+    // In a public setup, you'd fetch the ID of the default 'Sales Associate' role.
+    const defaultRole = await roleService.findRoleByName('Sales Associate');
+    if (!defaultRole) {
+      // Critical system failure if the default role is missing
+      throw new CustomError('System setup error: Default role "Sales Associate" is not configured.', 500);
+    }
+    roleIdToAssign = defaultRole.id;
+  } else {
+    // If an initialRoleId is provided, ensure the user can set it (e.g., for initial Admin setup)
+    // For simplicity, we trust the provided ID here, but in production, this needs tighter control.
+    const roleExists = await roleService.findRoleById(roleIdToAssign);
+    if (!roleExists) {
+        throw new CustomError('Invalid role ID provided.', 400);
+    }
+  }
+
+  // Create the User Account (createdByUserId is null for self-registration)
+  const newUser = await userService.createUserAccount({
+    username,
+    email,
+    password,
+    fullName,
+    roleId: roleIdToAssign,
+    // Add other default fields like 'isActive: true' if necessary in the service.
+  } as any, null); 
+
+  res.status(201).json({
+    success: true,
+    message: 'Registration successful. Account created.',
+    data: {
+      id: newUser.id,
+      username: newUser.username,
+      email: newUser.email,
+      fullName: newUser.fullName,
+      roleId: newUser.roleId
+    },
+  });
+});
+
+
+// export const registerUser = asyncHandler(async (req: Request, res: Response) => {
+//   const { username, email, password, fullName, initialRoleId } = req.body;
+
+//   // Basic Validation
+//   if (!username || !email || !password || !fullName) {
+//     throw new CustomError('Username, email, password, and full name are required for registration.', 400);
+//   }
+
+//   //Determine Role ID
+//   let roleIdToAssign = initialRoleId;
+  
+//   if (!roleIdToAssign) {
+//     // Uses the new roleService.findRoleByName
+//     const defaultRole = await roleService.findRoleByName('Sales Associate');
+//     if (!defaultRole) {
+//       throw new CustomError('System setup error: Default role "Sales Associate" is not configured.', 500);
+//     }
+//     roleIdToAssign = defaultRole.id;
+//   } else {
+//     // Uses the new roleService.findRoleById
+//     const roleExists = await roleService.findRoleById(roleIdToAssign);
+//     if (!roleExists) {
+//         throw new CustomError('Invalid role ID provided.', 400);
+//     }
+//   }
+
+//   // Create the User Account
+//   const newUser = await userService.createUserAccount({ /* ... */ } as any, null); 
+//   res.status(201).json({ /* ... */ });
+// });
