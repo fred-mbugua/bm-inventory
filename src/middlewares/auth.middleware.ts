@@ -18,7 +18,7 @@ export interface AuthenticatedRequest extends Request {
  */
 export const protect = asyncHandler(async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
   // Extracting the access token from the signed cookies
-  const token = req.signedCookies.accessToken;
+  const token = req.cookies.accessToken;
 
   // Checking if the token exists
   if (!token) {
@@ -52,6 +52,7 @@ export const protect = asyncHandler(async (req: AuthenticatedRequest, res: Respo
 export const authorize = (requiredPermissions: string[]) => {
   // Returning the middleware function
   return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+
     // Checking if the user object exists on the request
     if (!req.user) {
       // Throwing an error if the protect middleware failed or was skipped

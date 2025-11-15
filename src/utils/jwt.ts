@@ -16,7 +16,7 @@ interface JwtPayload {
 export const generateAccessToken = (payload: JwtPayload): string => {
   // Signing the payload to create an access token
   return jwt.sign(payload, JWT_SECRET, {
-    expiresIn: 7, // Setting the expiration time
+    expiresIn: JWT_ACCESS_TOKEN_EXPIRATION, // Setting the expiration time
   });
 };
 
@@ -38,6 +38,39 @@ export const generateRefreshToken = (payload: JwtPayload): string => {
  * @returns The decoded payload if valid, or throws an error.
  */
 export const verifyToken = (token: string): JwtPayload => {
-  // Verifying the token signature and expiration
-  return jwt.verify(token, JWT_SECRET) as JwtPayload;
+  try {
+   
+    // Verify token once and store the result
+    const decoded = jwt.verify(token, JWT_SECRET) as JwtPayload;
+    
+    return decoded;
+  } catch (error) {
+    console.error('JWT verification failed:', error);
+    
+    // Re-throw with more specific error messages
+    if (error instanceof jwt.TokenExpiredError) {
+      throw new Error('Token has expired');
+    } else if (error instanceof jwt.JsonWebTokenError) {
+      throw new Error('Invalid token');
+    } else if (error instanceof jwt.NotBeforeError) {
+      throw new Error('Token not active yet');
+    } else {
+      throw new Error('Token verification failed');
+    }
+  }
+};
+
+/**
+ * Utility function to check if a token is properly formatted
+ * @param token The token string to check
+ * @returns boolean indicating if token format is valid
+ */
+export const isValidTokenFormat = (token: string): boolean => {
+  if (!token || typeof token !== 'string') {
+    return false;
+  }
+  
+  // Check if token has the expected JWT format (3 parts separated by dots)
+  const parts = token.split('.');
+  return parts.length === 3 && parts.every(part => part.length > 0);
 };

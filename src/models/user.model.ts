@@ -36,7 +36,7 @@ export const findUserByUsernameOrEmailForAuth = async (identifier: string): Prom
   // Query to select user details, password, and role name
   const sql = `
     SELECT
-        u.id, u.username, u.email, u.password, u.full_name AS "fullName", u.is_active AS "isActive", u.role_id AS "roleId",
+        u.id, u.username, u.email, u.password_hash AS "password", u.full_name AS "fullName", u.is_active AS "isActive", u.role_id AS "roleId",
         r.name AS "roleName"
     FROM users u
     JOIN roles r ON u.role_id = r.id

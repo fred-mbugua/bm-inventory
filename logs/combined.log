@@ -239,3 +239,353 @@
 {"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-10 00:33:25"}
 {"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-10 00:33:25"}
 {"level":"info","message":"API entry point: /api","timestamp":"2025-11-10 00:33:25"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-13 22:19:29"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-13 22:19:29"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-13 22:19:29"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-13 22:19:29"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-13 22:19:29"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:10:50"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:10:50"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:10:50"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:10:50"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:10:50"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:11:03"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:11:03"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:11:03"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:11:03"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:11:03"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:27:39"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:27:39"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:27:39"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:27:39"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:27:39"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:27:50"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:27:50"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:27:50"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:27:50"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:27:50"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:27:51"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:27:51"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:27:51"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:27:51"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:27:51"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:27:59"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:27:59"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:27:59"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:27:59"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:27:59"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:28:09"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:28:09"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:28:09"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:28:09"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:28:09"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:31:38"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:31:38"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:31:38"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:31:38"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:31:38"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3718","message":"Database query error: column u.password does not exist","name":"error","position":"48","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column u.password does not exist\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\pg\\lib\\client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at query (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\config\\database.ts:53:17)\n    at findUserByUsernameOrEmailForAuth (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\models\\user.model.ts:46:16)\n    at loginUser (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\services\\auth.service.ts:22:16)\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\controller\\auth.controller.ts:47:30","timestamp":"2025-11-14 21:33:25"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3718","message":"UNEXPECTED SERVER ERROR: column u.password does not exist","name":"error","position":"48","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column u.password does not exist\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\pg\\lib\\client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at query (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\config\\database.ts:53:17)\n    at findUserByUsernameOrEmailForAuth (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\models\\user.model.ts:46:16)\n    at loginUser (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\services\\auth.service.ts:22:16)\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\controller\\auth.controller.ts:47:30","timestamp":"2025-11-14 21:33:25"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:34:59"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:34:59"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:34:59"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:34:59"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:34:59"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:35:16"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:35:16"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:35:16"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:35:16"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:35:16"}
+{"level":"error","message":"UNEXPECTED SERVER ERROR: Illegal arguments: string, undefined","stack":"Error: Illegal arguments: string, undefined\n    at _async (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\bcryptjs\\umd\\index.js:305:15)\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\bcryptjs\\umd\\index.js:335:11\n    at new Promise (<anonymous>)\n    at Object.compare (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\bcryptjs\\umd\\index.js:334:16)\n    at comparePassword (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\utils\\password.ts:26:17)\n    at loginUser (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\services\\auth.service.ts:31:40)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\controller\\auth.controller.ts:47:30","timestamp":"2025-11-14 21:35:22"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:44:16"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:44:16"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:44:16"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:44:16"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:44:16"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 21:44:48"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 21:44:48"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 21:44:48"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 21:44:48"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 21:44:48"}
+{"cause":{},"level":"error","message":"Failed to load configurations into cache: Connection terminated due to connection timeout","stack":"Error: Connection terminated due to connection timeout\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at query (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\config\\database.ts:46:18)\n    at ConfigurationService.loadConfigurationsToCache (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\services\\configuration.service.ts:23:30)","timestamp":"2025-11-14 22:10:40"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:10:41"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:10:41"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:10:41"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:10:41"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:10:47"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:10:47"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:10:47"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:10:47"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:10:47"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:11:30"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:11:30"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:11:30"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:11:30"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:11:30"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:11:35"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:11:35"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:11:35"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:11:35"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:11:35"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:18:31"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:18:31"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:18:31"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:18:31"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:18:31"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:18:40"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:18:40"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:18:40"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:18:40"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:18:40"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:21:51"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:21:51"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:21:51"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:21:51"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:21:51"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:22:34"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:22:34"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:22:34"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:22:34"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:22:34"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:24:00"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:24:00"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:24:00"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:24:00"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:24:00"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:24:06"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:24:06"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:24:06"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:24:06"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:24:06"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:24:26"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:24:26"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:24:26"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:24:26"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:24:26"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-14 22:24:30"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-14 22:24:30"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-14 22:24:30"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-14 22:24:30"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-14 22:24:30"}
+{"cause":{},"level":"error","message":"Failed to load configurations into cache: Connection terminated due to connection timeout","stack":"Error: Connection terminated due to connection timeout\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at query (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\config\\database.ts:46:18)\n    at ConfigurationService.loadConfigurationsToCache (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\services\\configuration.service.ts:23:30)","timestamp":"2025-11-15 22:15:25"}
+{"cause":{},"level":"error","message":"PostgreSQL connection error: Connection terminated due to connection timeout","stack":"Error: Connection terminated due to connection timeout\n    at E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at connectDB (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\config\\database.ts:32:5)\n    at startServer (E:\\Pers\\Fred\\Pers\\Free Style Code Technologies\\BM\\bm-inventory\\src\\server.ts:13:5)","timestamp":"2025-11-15 22:15:27"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:16:28"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:16:28"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:16:28"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:16:28"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:16:28"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:27:41"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:27:41"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:27:41"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:27:41"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:27:41"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:27:43"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:27:43"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:27:43"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:27:43"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:27:43"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:27:49"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:27:49"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:27:49"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:27:49"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:27:49"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:27:54"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:27:54"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:27:54"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:27:54"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:27:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:28:00"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:28:00"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:28:00"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:28:00"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:28:00"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:29:01"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:29:01"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:29:01"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:29:01"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:29:01"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:32:47"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:32:47"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:32:47"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:32:47"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:32:47"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:32:52"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:32:52"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:32:52"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:32:52"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:32:52"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:34:34"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:34:34"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:34:34"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:34:34"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:34:34"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:35:25"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:35:25"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:35:25"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:35:25"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:35:25"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:35:28"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:35:28"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:35:28"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:35:28"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:35:28"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:35:31"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:35:31"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:35:31"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:35:31"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:35:31"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:50:10"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:50:10"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:50:10"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:50:10"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:50:10"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:50:18"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:50:18"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:50:18"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:50:18"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:50:18"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:50:28"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:50:28"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:50:28"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:50:28"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:50:28"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:52:36"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:52:36"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:52:36"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:52:36"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:52:36"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:53:51"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:53:51"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:53:51"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:53:51"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:53:51"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:54:21"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:54:21"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:54:21"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:54:21"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:54:21"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:54:30"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:54:30"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:54:30"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:54:30"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:54:30"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:54:38"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:54:38"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:54:38"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:54:38"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:54:38"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 22:54:46"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 22:54:46"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 22:54:46"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 22:54:46"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 22:54:46"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:10:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:10:54"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:10:54"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:10:54"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:10:54"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:12:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:12:54"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:12:54"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:12:54"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:12:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:13:22"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:13:22"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:13:22"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:13:22"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:13:22"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:13:30"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:13:30"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:13:30"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:13:30"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:13:30"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:13:58"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:13:58"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:13:58"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:13:58"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:13:58"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:14:40"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:14:40"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:14:40"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:14:40"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:14:40"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:21:00"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:21:00"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:21:00"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:21:00"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:21:00"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:22:03"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:22:03"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:22:03"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:22:03"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:22:03"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:22:15"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:22:15"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:22:15"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:22:15"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:22:15"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:22:38"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:22:38"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:22:38"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:22:38"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:22:38"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:23:19"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:23:19"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:23:19"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:23:19"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:23:19"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:23:23"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:23:24"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:23:24"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:23:24"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:23:24"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:23:36"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:23:36"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:23:36"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:23:36"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:23:36"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:24:03"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:24:03"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:24:03"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:24:03"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:24:03"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:24:18"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:24:18"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:24:18"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:24:18"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:24:18"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:24:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:24:54"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:24:54"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:24:54"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:24:54"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:25:04"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:25:04"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:25:04"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:25:04"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:25:04"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:29:24"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:29:24"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:29:24"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:29:24"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:29:24"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:31:01"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:31:01"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:31:01"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:31:01"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:31:01"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:39:42"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:39:42"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:39:42"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:39:42"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:39:42"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:39:48"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:39:48"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:39:48"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:39:48"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:39:48"}
+{"level":"info","message":"Application configurations loaded into cache.","timestamp":"2025-11-15 23:40:17"}
+{"level":"info","message":"PostgreSQL connected.","timestamp":"2025-11-15 23:40:17"}
+{"level":"info","message":"Database connection established successfully.","timestamp":"2025-11-15 23:40:17"}
+{"level":"info","message":"Server is running on port 3000.","timestamp":"2025-11-15 23:40:17"}
+{"level":"info","message":"API entry point: /api","timestamp":"2025-11-15 23:40:17"}
